@@ -1,3 +1,7 @@
+# EXPANDED VERSION OF THEIRS
+see the entire repo here:  
+https://www.npmjs.com/package/dense-redux-actions
+
 ## Example project for dense-action-creators 
 
 Small demo project intended to show how to use TypeScript to enhance handling of actions type/action creators in this case using [dense-redux-actions](https://www.npmjs.com/package/dense-redux-actions)
