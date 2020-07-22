@@ -1,5 +1,6 @@
 # EXPANDED VERSION OF THEIRS
-see the entire repo here:  
+This is my own version where i have messed around with theirs, only as practise, and all adjustments will be used for notes.  
+If interesting check out the module at:  
 https://www.npmjs.com/package/dense-redux-actions
 
 ## Example project for dense-action-creators 
