@@ -27,6 +27,7 @@ interface Props {
   writingInMyfield:(newString: string)=> void;
   myfieldText: string;
   myTextColor:string; 
+  showVapeNation:boolean;
 
 
 
@@ -119,6 +120,7 @@ class SpeedMonitor extends React.PureComponent<Props> {
           textValue={this.props.myfieldText}
           whenIWrite={(newString:string)=>this.props.writingInMyfield(newString)}
           textColor={this.props.myTextColor}
+          showVapeNation={this.props.showVapeNation}
           />
           <DigitalCounter
             color={this.selectColor()}

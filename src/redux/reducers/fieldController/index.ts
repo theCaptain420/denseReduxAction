@@ -1,14 +1,17 @@
 import {UPDATE_MY_TEXT_FIELD,
-UPDATE_TEXT_COLOR} from './../../actions'
+UPDATE_TEXT_COLOR,
+UPDATE_VP_VISABILITY} from './../../actions'
 
 export interface fieldState {
     currentString: string,
-    currentColor: string
+    currentColor: string,
+    showingVP:boolean
   }
   
   const initialState: fieldState = {
     currentString: "",
-    currentColor: "blue"
+    currentColor: "blue",
+    showingVP:false
   
   };
   
@@ -26,6 +29,14 @@ export interface fieldState {
           ...state,
           currentColor:action._payload
         }
+      }
+      case UPDATE_VP_VISABILITY.type :{
+        console.log(action._payload)
+        return{
+          ...state,
+          showingVP:action._payload
+        }
+
       }
     }
   

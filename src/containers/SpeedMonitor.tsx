@@ -22,7 +22,8 @@ const mapStateToProps = (state: AppState) => {
     myButtonValue: state.buttonService.currentValue,
     
     myfieldText: state.fieldTextService.currentString,
-    myTextColor: state.fieldTextService.currentColor
+    myTextColor: state.fieldTextService.currentColor,
+    showVapeNation: state.fieldTextService.showingVP
     
   };
 };
