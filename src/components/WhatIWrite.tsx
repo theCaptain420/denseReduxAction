@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, Text, TextInput } from 'react-native';
+import YeahComp from './funcomponents/yeahComp'
 
 interface MyProps {
     textValue: string
@@ -22,17 +23,7 @@ const styles = StyleSheet.create({
 })
 
 class WhatIWrite extends React.PureComponent<MyProps>{
-    PrintingVP=()=>{
-        if(this.props.showVapeNation){
-            return(
-                <Text>
-                    YEAH BOIII
-                </Text>
-            )
-        }else{
-            return null
-        }
-    }
+   
 
     render() {
         return (
@@ -46,7 +37,10 @@ class WhatIWrite extends React.PureComponent<MyProps>{
                     style={styles.border}
                 >
                 </TextInput>
-                <this.PrintingVP/>
+                <YeahComp 
+                visible={this.props.showVapeNation}
+                text={"i can give a little"}
+                />
             </View>
         )
     }

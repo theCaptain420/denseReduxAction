@@ -31,7 +31,6 @@ export interface fieldState {
         }
       }
       case UPDATE_VP_VISABILITY.type :{
-        console.log(action._payload)
         return{
           ...state,
           showingVP:action._payload
