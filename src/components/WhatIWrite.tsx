@@ -14,9 +14,17 @@ const styles = StyleSheet.create({
     myView: {
         alignItems: "center",
     },
-    border: {
-        borderColor: "red",
-        borderWidth: 2
+    myTextInput: {
+        borderColor: "lightblue",
+        borderBottomWidth: 2,
+        paddingVertical:0,
+        width:"90%"
+    },
+    myTitleOfInput: {
+        marginTop:7,
+        fontSize:20,
+        fontWeight:"bold",
+        
     }
 
 
@@ -28,18 +36,18 @@ class WhatIWrite extends React.PureComponent<MyProps>{
     render() {
         return (
             <View style={styles.myView}>
-                <Text style={{ color: this.props.textColor }}>
+                <Text style={[styles.myTitleOfInput,{ color: this.props.textColor }]}>
                     {this.props.textValue}
                 </Text>
                 <TextInput
                     value={this.props.textValue}
                     onChangeText={this.props.whenIWrite}
-                    style={styles.border}
+                    style={styles.myTextInput}
                 >
                 </TextInput>
                 <YeahComp 
                 visible={this.props.showVapeNation}
-                text={"i can give a little"}
+                text={"Leggo"}
                 />
             </View>
         )

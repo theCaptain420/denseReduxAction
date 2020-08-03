@@ -9,9 +9,7 @@ interface MyProps{
 
 
 const styles = StyleSheet.create({
-    blueButton:{
-        color:"blue"
-    },
+    
     myView:{
         alignItems:"center",
 
@@ -26,7 +24,7 @@ class AmountPressed extends React.PureComponent<MyProps>{
         return(
             <View style={styles.myView}>
                 <Button
-                color="lightblue"
+                color="black"
                 title={"Ive been pressed "+this.props.faceValue+" times"}
                 onPress={this.props.whenIPressYou}
                 >

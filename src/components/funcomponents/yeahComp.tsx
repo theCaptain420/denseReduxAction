@@ -7,6 +7,12 @@ interface InputProps {
     text?: string
 }
 const Styles = StyleSheet.create({
+    myFunText:{
+        color:"green",
+        fontWeight:"bold",
+        fontSize:20,
+        textTransform:"uppercase"
+    }
 })
 
 export default function ({visible,text="not even giving me something to work with?" }: InputProps) {
@@ -16,8 +22,8 @@ export default function ({visible,text="not even giving me something to work wit
         if (visible) {
             return (
                 <View>
-                    <Text>
-                        {text}
+                    <Text style={Styles.myFunText}>
+                    {"<"}{text}{">"}
                     </Text>
 
                 </View>
