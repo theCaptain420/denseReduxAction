@@ -8,6 +8,7 @@ import { strings } from '../locales/index';
 
 import AmountPressed from './AmountPressed'
 import WhatIWrite from './WhatIWrite'
+import ResetColor from './ColorChangingButton'
 
 interface Props {
   whereAmI: () => void;
@@ -28,6 +29,7 @@ interface Props {
   myfieldText: string;
   myTextColor:string; 
   showVapeNation:boolean;
+  resetTextColor:()=>void;
 
 
 
@@ -122,12 +124,17 @@ class SpeedMonitor extends React.PureComponent<Props> {
           textColor={this.props.myTextColor}
           showVapeNation={this.props.showVapeNation}
           />
+          <ResetColor
+            whenPressed={this.props.resetTextColor}
+          />
+
           <DigitalCounter
             color={this.selectColor()}
             buttonText={this.props.isMonitoringSpeed ? strings('speedMonitor.stop') : strings('speedMonitor.start')}
             count={this.props.currentSpeed}
             onPress={this.props.toggleSpeedMonitor}
           />
+
           <View style={{ flex: 1, alignItems: 'center' }}>
             <Button onPress={this.props.whereAmI} title={ strings('speedMonitor.getLocationButton')} />
             {this.showLocation(this.props.currentLocation)}

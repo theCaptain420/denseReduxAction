@@ -28,7 +28,7 @@ class AmountPressed extends React.PureComponent<MyProps>{
                 title={"Ive been pressed "+this.props.faceValue+" times"}
                 onPress={this.props.whenIPressYou}
                 >
-                </Button>
+                </Button>    
             </View>
         )
     }
