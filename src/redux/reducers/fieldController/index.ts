@@ -1,7 +1,8 @@
 import {UPDATE_MY_TEXT_FIELD,
 UPDATE_TEXT_COLOR,
 UPDATE_VP_VISABILITY,
-RESET_TEXT_COLOR} from './../../actions'
+RESET_TEXT_COLOR,
+RESET_TEXT} from './../../actions'
 
 export interface fieldState {
     currentString: string,
@@ -41,6 +42,12 @@ export interface fieldState {
         return {
           ...state,
           currentColor:"black"
+        }
+      }
+      case RESET_TEXT.type :{
+        return {
+          ...state,
+          currentString:""
         }
       }
     }

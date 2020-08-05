@@ -30,7 +30,7 @@ interface Props {
   myTextColor:string; 
   showVapeNation:boolean;
   resetTextColor:()=>void;
-
+  resetText:()=> void;
 
 
 }
@@ -126,6 +126,7 @@ class SpeedMonitor extends React.PureComponent<Props> {
           />
           <ResetColor
             whenPressed={this.props.resetTextColor}
+            resetColorBtnPress={this.props.resetText}
           />
 
           <DigitalCounter

@@ -6,7 +6,8 @@ import {
   SC_TOGGLE_MONITORING_REQUEST,
   UPDATE_MY_BUTTON_NUMBER,
   UPDATE_MY_TEXT_FIELD,
-  RESET_TEXT_COLOR
+  RESET_TEXT_COLOR,
+  RESET_TEXT
 
 } from '../redux/actions';
 import SpeedMonitor from '../components/SpeedMonitor';
@@ -35,6 +36,8 @@ const mapDispatchToProps = (dispatch: any) => ({
   activateMyButton: ()=> dispatch(UPDATE_MY_BUTTON_NUMBER.create(null)),
   writingInMyfield: (newString:string)=> dispatch(UPDATE_MY_TEXT_FIELD.create(newString)),
   resetTextColor:()=>dispatch(RESET_TEXT_COLOR.create(null)),
+  resetText:()=>dispatch(RESET_TEXT.create(null)),
+
 
   whereAmI: () => dispatch(GEO_LOCATION_REQUEST.create(null)),
   selectSpeedLimit: (newLimit: string) => dispatch(SC_SET_SPEED_LIMIT.create(newLimit)),

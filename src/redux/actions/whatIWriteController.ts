@@ -7,3 +7,4 @@ export const UPDATE_VP_VISABILITY = new ActionCreator<boolean>('UPDATE_VP_VISABI
 export const UPDATE_TEXT_COLOR = new ActionCreator<string>('UPDATE_TEXT_COLOR');
 
 export const RESET_TEXT_COLOR = new ActionCreator<null>('RESET_TEXT_COLOR')
+export const RESET_TEXT = new ActionCreator<null>('RESET_TEXT')
