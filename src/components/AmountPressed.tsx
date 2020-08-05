@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Picker, Text, Button } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 
 interface MyProps{
     startValue:number

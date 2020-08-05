@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
         borderColor: "lightblue",
         borderBottomWidth: 2,
         paddingVertical:0,
-        width:"90%"
+        width:"90%",
+        marginBottom:10
     },
     myTitleOfInput: {
         marginTop:7,
