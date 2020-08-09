@@ -9,6 +9,7 @@ import { strings } from '../locales/index';
 import AmountPressed from './AmountPressed'
 import WhatIWrite from './WhatIWrite'
 import ResetColor from './ColorChangingButton'
+import WhoWroteArt from './WhoWroteArt'
 
 interface Props {
   whereAmI: () => void;
@@ -31,6 +32,9 @@ interface Props {
   showVapeNation:boolean;
   resetTextColor:()=>void;
   resetText:()=> void;
+
+  articlePress:(theArticleNumber:number)=>void;
+  articleWriter:string
 
 
 }
@@ -96,23 +100,8 @@ class SpeedMonitor extends React.PureComponent<Props> {
 
   public render() {
     return (
-      <SafeAreaView style={{ flex: 1, marginHorizontal: 20 }}>
-          <View style={{ flexDirection: 'row', height: '20%' }}>
-            <Selector
-              style={{ width: 100 }}
-              label={strings('speedMonitor.selectLimit')}
-              selected={this.props.speedLimit}
-              values={this.props.speedLimits}
-              onSelect={this.props.selectSpeedLimit}
-            />
-            <Selector
-              style={{ width: 120 }}
-              label={strings('speedMonitor.selectUnit')}
-              selected={this.props.unit}
-              values={speedUnits}
-              onSelect={(unit: string) => this.props.selectUnit(unit as SpeedUnit)}
-            />
-          </View>
+      <SafeAreaView style={{ flex: 1, marginHorizontal: 20, marginTop:10 }}>
+         
           <AmountPressed
           startValue={0}
           faceValue={this.props.myButtonValue}
@@ -129,17 +118,12 @@ class SpeedMonitor extends React.PureComponent<Props> {
             resetColorBtnPress={this.props.resetText}
           />
 
-          <DigitalCounter
-            color={this.selectColor()}
-            buttonText={this.props.isMonitoringSpeed ? strings('speedMonitor.stop') : strings('speedMonitor.start')}
-            count={this.props.currentSpeed}
-            onPress={this.props.toggleSpeedMonitor}
-          />
+          <WhoWroteArt
+            whenPressed={this.props.articlePress}
+            theID={20}
+            writer={this.props.articleWriter}
+          ></WhoWroteArt>
 
-          <View style={{ flex: 1, alignItems: 'center' }}>
-            <Button onPress={this.props.whereAmI} title={ strings('speedMonitor.getLocationButton')} />
-            {this.showLocation(this.props.currentLocation)}
-          </View>
       </SafeAreaView>
     );
   }

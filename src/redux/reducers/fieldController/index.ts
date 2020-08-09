@@ -2,18 +2,22 @@ import {UPDATE_MY_TEXT_FIELD,
 UPDATE_TEXT_COLOR,
 UPDATE_VP_VISABILITY,
 RESET_TEXT_COLOR,
-RESET_TEXT} from './../../actions'
+RESET_TEXT,
+GET_THE_PERSON_ARTICLE,
+GOTTEN_PERSON_ARTICLE} from './../../actions'
 
 export interface fieldState {
     currentString: string,
     currentColor: string,
-    showingVP:boolean
+    showingVP:boolean,
+    artWriter:string
   }
   
   const initialState: fieldState = {
     currentString: "",
     currentColor: "blue",
-    showingVP:false
+    showingVP:false,
+    artWriter:"click me"
   
   };
   
@@ -49,6 +53,18 @@ export interface fieldState {
           ...state,
           currentString:""
         }
+      }
+      case GET_THE_PERSON_ARTICLE.type :{
+        return{
+          ...state,
+          artWriter:"loading"
+        }
+      }
+      case GOTTEN_PERSON_ARTICLE.type :{
+        return{
+          ...state,
+        artWriter:action._payload
+      }
       }
     }
   

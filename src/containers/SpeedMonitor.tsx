@@ -7,7 +7,8 @@ import {
   UPDATE_MY_BUTTON_NUMBER,
   UPDATE_MY_TEXT_FIELD,
   RESET_TEXT_COLOR,
-  RESET_TEXT
+  RESET_TEXT,
+  GET_THE_PERSON_ARTICLE
 
 } from '../redux/actions';
 import SpeedMonitor from '../components/SpeedMonitor';
@@ -28,6 +29,7 @@ const mapStateToProps = (state: AppState) => {
     myTextColor: state.fieldTextService.currentColor,
     showVapeNation: state.fieldTextService.showingVP,
 
+    articleWriter: state.fieldTextService.artWriter
     
   };
 };
@@ -37,7 +39,7 @@ const mapDispatchToProps = (dispatch: any) => ({
   writingInMyfield: (newString:string)=> dispatch(UPDATE_MY_TEXT_FIELD.create(newString)),
   resetTextColor:()=>dispatch(RESET_TEXT_COLOR.create(null)),
   resetText:()=>dispatch(RESET_TEXT.create(null)),
-
+  articlePress:(articleID:number)=>dispatch(GET_THE_PERSON_ARTICLE.create(articleID)),
 
   whereAmI: () => dispatch(GEO_LOCATION_REQUEST.create(null)),
   selectSpeedLimit: (newLimit: string) => dispatch(SC_SET_SPEED_LIMIT.create(newLimit)),

@@ -8,3 +8,6 @@ export const UPDATE_TEXT_COLOR = new ActionCreator<string>('UPDATE_TEXT_COLOR');
 
 export const RESET_TEXT_COLOR = new ActionCreator<null>('RESET_TEXT_COLOR')
 export const RESET_TEXT = new ActionCreator<null>('RESET_TEXT')
+
+export const GET_THE_PERSON_ARTICLE = new ActionCreator<number>('GET_THE_PERSON_ARTICLE')
+export const GOTTEN_PERSON_ARTICLE = new ActionCreator<string>('GOTTEN_PERSON_ARTICLE')
